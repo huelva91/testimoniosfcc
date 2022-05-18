@@ -1,18 +1,22 @@
 import React from "react";
 import "../estilos/Testimonio.css";
 
-function Testimonio() {
+function Testimonio(props) {
   return (
     <div className="contenedor-testimonio">
       <img
         className="imagen-testimonio"
-        src={require("../imagenes/testimonio-emma.png")}
+        src={require(`../imagenes/testimonio-${props.imagen}.png`)}
         alt="Foto de Emma"
       />
       <div className="contenedor-texto-testimonio">
-        <p className="nombre-testimonio">Emma Bostian en Suecia</p>
-        <p className="cargo-testimonio">Ingeniera Spotify</p>
-        <p className="texto-testimonio">Esto es el dddddddddddddddddddddddddddddddddddddddddddddddddddtexto del testimonio</p>
+        <p className="nombre-testimonio">
+          <strong>{props.nombre}</strong> en {props.pais}
+        </p>
+        <p className="cargo-testimonio">
+          {props.cargo} en <strong>{props.empresa}</strong>
+        </p>
+        <p className="texto-testimonio">"{props.testimonio}"</p>
       </div>
     </div>
   );
