@@ -1,10 +1,13 @@
-import './App.css';
-import Testimonio from './componentes/Testimonio';
+import "./App.css";
+import Testimonio from "./componentes/Testimonio";
 
 function App() {
   return (
     <div className="App">
-      <Testimonio />
+      <div className="contenedor-principal">
+        <h1> Aprende los fundamentos de React en este curso desde cero </h1>
+        <Testimonio />
+      </div>
     </div>
   );
 }
